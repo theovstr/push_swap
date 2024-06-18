@@ -1,0 +1,10 @@
+DONE // Refaire la libft avec ft_printf et gnl a l'interieur pour pouvoir l'utiliser plus facilement !
+
+First lets do the checking of the argument that are given as input /
+
+Choose if im gonna go for chained list (im not) or tables 
+
+Create the operation needed for push swap
+
+--- For now !
+
