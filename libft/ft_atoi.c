@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:21:17 by theveste          #+#    #+#             */
-/*   Updated: 2023/11/15 13:07:53 by theveste         ###   ########.fr       */
+/*   Updated: 2024/06/20 11:26:12 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,18 +38,17 @@ int	ft_atoi(const char *str)
 	}
 	return (signe * nbr);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
 
-int main(void) // Veuilez rentrer une chaine de character 
-								//a tranformer apres le nom de l'executable
-{
-	printf("%d : %d\n", ft_atoi("2147483647"), atoi("2147483647"));
-	printf("%d : %d\n", ft_atoi("0"), atoi("0"));
-	printf("%d : %d\n", ft_atoi("-85"), atoi("-85"));
-	printf("%d : %d\n", ft_atoi("15236"), atoi("15236"));
-	printf("%d : %d\n", ft_atoi("-2147483648"), atoi("-2147483648"));
-	printf("%d : %d\n", ft_atoi("--  458"), atoi("--  458"));
-}
-*/
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(void) // Veuilez rentrer une chaine de character
+// 								//a tranformer apres le nom de l'executable
+// {
+// 	printf("%d : %d\n", ft_atoi("2147483647"), atoi("2147483647"));
+// 	printf("%d : %d\n", ft_atoi("0"), atoi("0"));
+// 	printf("%d : %d\n", ft_atoi("-85"), atoi("-85"));
+// 	printf("%d : %d\n", ft_atoi("15236"), atoi("15236"));
+// 	printf("%d : %d\n", ft_atoi("-2147483648"), atoi("-2147483648"));
+// 	printf("%d : %d\n", ft_atoi("--  458"), atoi("--  458"));
+// }

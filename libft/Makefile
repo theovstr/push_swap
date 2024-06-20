@@ -12,7 +12,7 @@ SRC= ft_atoi.c     ft_isalpha.c  ft_memchr.c   ft_memset.c      ft_strjoin.c  ft
 	ft_memchr.c      ft_split.c     ft_strncmp.c	get_next_line.c		get_next_line_utils.c \
 	ft_create_array.c ft_checktype.c ft_flags.c ft_get_length.c ft_integer_handler.c ft_itoa.c ft_justify_hexa.c \
 	ft_justify_integer.c ft_justify_integer2.c ft_justifyptr.c ft_printchars.c ft_printf.c \
-	ft_printhexa.c ft_printnb.c ft_printptr.c ft_printunsigned.c ft_str_handler.c minilibft.c
+	ft_printhexa.c ft_printnb.c ft_printptr.c ft_printunsigned.c ft_str_handler.c minilibft.c ft_strcmp.c
 
 OBJ= $(SRC:%.c=%.o)
 
@@ -42,7 +42,7 @@ bonus: $(OBJ_BONUS)
 	@echo "$(GREEN)Compiling $< $(NC)"
 
 clean :
-	@echo "$(MAGENTA)Cleaning object files $(NC)"
+	@echo "$(MAGENTA)Cleaning libft object files $(NC)"
 	@rm -f *.o
 
 fclean : clean

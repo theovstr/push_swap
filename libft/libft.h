@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 02:30:51 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/18 15:46:27 by theveste         ###   ########.fr       */
+/*   Updated: 2024/06/20 19:55:03 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+int					ft_strcmp(const char *s1, const char *s2);
 void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstclear(t_list **lst, void (*del)(void *));
@@ -89,6 +90,7 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_itoa(int n);
 char				**ft_split(char const *str, char c);
+void				*ft_free(char **str, int count);
 // GET_NEXT_LINE //
 char				*ft_calloc_gnl(size_t elementSize, size_t elementCount);
 char				*get_next_line(int fd);
