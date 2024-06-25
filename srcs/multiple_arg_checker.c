@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:28:12 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/25 13:55:28 by theveste         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:48:57 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ int	list_is_valid_mulitple_arg(t_cnt *data)
 		if (ft_atoi(data->list_of_number[data->idx]) == 0
 			|| only_number(data->list_of_number[data->idx]) == 0)
 		{
-			ft_printf("Error\nLa liste ne doit comporter que des nombres,\
-				rien d'autre");
+			ft_printf("Error\nLa liste ne doit comporter que des nombres, rien d'autre");
 			if (data->multi_args == 0)
 				ft_free(data->list_of_number, data->list_size);
 			exit(EXIT_FAILURE);

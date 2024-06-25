@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:21:17 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/20 11:26:12 by theveste         ###   ########.fr       */
+/*   Updated: 2024/06/25 17:16:08 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	nbr;
-	int	signe;
+	int		i;
+	long	nbr;
+	int		signe;
 
 	i = 0;
 	nbr = 0;
@@ -36,6 +36,8 @@ int	ft_atoi(const char *str)
 		nbr += str[i] - 48;
 		i++;
 	}
+	if (nbr * signe > 2147483647 || nbr * signe < -2147483648)
+		return (0);
 	return (signe * nbr);
 }
 

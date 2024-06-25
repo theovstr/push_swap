@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:33:37 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/25 13:56:11 by theveste         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:48:14 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,18 @@ int	main(int argc, char **argv)
 {
 	t_cnt	data;
 	t_stack	*a;
-	t_stack *tmp;
+	// t_stack *tmp;
 
 	args_checking(argc, argv, &data); // 0.1 live if no error
 	a = list_creation(&data);
 	if (data.multi_args == 0)
 		ft_free(data.list_of_number, data.list_size);
-	tmp = a;
-	while (tmp != NULL)
-	{
-		ft_printf("%d\n", tmp->nbr);
-		tmp = tmp->next;
-	}
+	// tmp = a;
+	// while (tmp != NULL)
+	// {
+	// 	ft_printf("%d\n", tmp->nbr);
+	// 	tmp = tmp->next;
+	// }
 	ft_free_list(&a);
 	ft_printf("Ending is ok !");
 }
