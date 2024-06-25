@@ -8,7 +8,9 @@ SRC_DIR	=	./srcs/
 
 C_FILE	=	push_swap.c \
 			argument_checker.c \
-			create_list.c
+			create_list.c	\
+			one_arg_checker.c \
+			multiple_arg_checker.c
 
 SRC		= $(addprefix $(SRC_DIR), $(C_FILE))
 
@@ -44,6 +46,31 @@ fclean: clean
 	@echo "$(MAGENTA)Removed push_swap executable ! $(NC)"
 	@rm -f $(NAME)
 	@echo "$(MAGENTA)Done. $(NC)"
+
+test3:		$(NAME)	
+		$(eval ARG = $(shell shuf -i 0-50 -n 3))
+		valgrind ./push_swap $(ARG) | ./checker_linux $(ARG)
+		@echo -n "Instructions: "
+		@./push_swap $(ARG) | wc -l
+
+test5:		$(NAME)	
+		$(eval ARG = $(shell shuf -i 0-50 -n 5))
+		valgrind ./push_swap $(ARG) | ./checker_linux $(ARG) 
+		@echo -n "Instructions: "
+		@./push_swap $(ARG) | wc -l
+
+	
+test100:	$(NAME)	
+		$(eval ARG = $(shell shuf -i 0-1000 -n 100))
+		valgrind ./push_swap $(ARG) | ./checker_linux $(ARG) 
+		@echo -n "Instructions: "
+		@./push_swap $(ARG) | wc -l
+
+test500:	$(NAME)	
+		$(eval ARG = $(shell shuf -i 0-2000 -n 500))
+		valgrind ./push_swap $(ARG) | ./checker_linux $(ARG) 
+		@echo -n "Instructions: "
+		@./push_swap $(ARG) | wc -l
 
 re : fclean all
 

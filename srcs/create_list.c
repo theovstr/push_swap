@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 11:54:58 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/25 10:34:33 by theveste         ###   ########.fr       */
+/*   Updated: 2024/06/25 13:44:16 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ t_stack	*list_creation(t_cnt *data)
 	int	j;
 
 	i = 0;
+	if (data->multi_args == 1)
+		i = 1;
 	a = NULL;
 	while (i < data->idx)
 	{
