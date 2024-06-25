@@ -7,7 +7,8 @@ NAME 	=	push_swap
 SRC_DIR	=	./srcs/
 
 C_FILE	=	push_swap.c \
-			argument_checker.c
+			argument_checker.c \
+			create_list.c
 
 SRC		= $(addprefix $(SRC_DIR), $(C_FILE))
 

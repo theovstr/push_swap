@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 16:18:26 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/20 18:23:39 by theveste         ###   ########.fr       */
+/*   Updated: 2024/06/25 10:36:15 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,19 @@ typedef struct s_stack
 	long			index;
 	struct s_stack	*next;
 	struct s_stack	*prev;
-}				t_stack;
-
+}					t_stack;
 
 typedef struct s_cnt
 {
-	int		**list_in_int;
-	char	**list_of_number;
-	int		list_size;
-	int		idx;
-	t_stack	stack_a;
-}	t_cnt;
+	char			**list_of_number;
+	int				list_size;
+	int				idx;
+	t_stack			stack_a;
+}					t_cnt;
 
 void				args_checking(int argc, char **argv, t_cnt *data);
+t_stack				*list_creation(t_cnt *data);
+t_stack				*ft_lstlaste(t_stack *lst);
+void				ft_free_list(t_stack **lst);
 
 #endif
