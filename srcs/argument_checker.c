@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 10:40:45 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/25 13:56:54 by theveste         ###   ########.fr       */
+/*   Updated: 2024/06/26 15:58:07 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ void	args_checking(int argc, char **argv, t_cnt *data)
 	}
 	else if (argc == 2)
 	{
+		data->multi_args = 0;
 		if (list_is_valid(argv[1], data) == 0) // if no, 0.1 live
 			exit(EXIT_FAILURE);
-		data->multi_args = 0;
 	}
 	else
 	{

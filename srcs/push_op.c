@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   push_op.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 19:53:39 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/26 16:11:02 by theveste         ###   ########.fr       */
+/*   Created: 2024/06/26 15:42:27 by theveste          #+#    #+#             */
+/*   Updated: 2024/06/26 19:04:23 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/push_swap.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+void	pa(t_stack **a, t_stack **b)
 {
-	int i;
-	int j;
+	t_stack	*tmp;
 
-	i = 0;
-	j = 0;
-	if (s1[i] == '+')
-		i++;
-	if (s2[j] == '+')
-		j++;
-	while(s1[i] == '0')
-		i++;
-	while(s2[j] == '0')
-		j++;
-	while (s1[i] && s2[j] && s1[i] == s2[j])
-	{
-		i++;
-		j++;
-	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[j]);
+	if (!*b)
+		return ;
+	tmp = *a;
+	*a = *b;
+	*b = (*b)->next;
+	(*a)->next = tmp;
+	write(1, "pa\n", 3);
+}
+
+void	pb(t_stack **stack_a, t_stack **stack_b)
+{
+	t_stack	*tmp;
+
+	if (!*stack_a)
+		return ;
+	tmp = *stack_b;
+	*stack_b = *stack_a;
+	*stack_a = (*stack_a)->next;
+	(*stack_b)->next = tmp;
+	write(1, "pb\n", 3);
 }

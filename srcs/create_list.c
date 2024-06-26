@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 11:54:58 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/25 13:44:16 by theveste         ###   ########.fr       */
+/*   Updated: 2024/06/26 16:24:51 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 /**
  * Need to create the full list of the argument
- * Using the size of the array given by split 
- * creating 
-*/
+ * Using the size of the array given by split
+ * creating
+ */
 
 t_stack	*ft_lstlaste(t_stack *lst)
 {
@@ -53,8 +53,8 @@ t_stack	*list_creation(t_cnt *data)
 {
 	t_stack	*a;
 	t_stack	*new;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	if (data->multi_args == 1)
@@ -67,7 +67,7 @@ t_stack	*list_creation(t_cnt *data)
 		if (new == NULL)
 			ft_free_list(&a);
 		ft_add_back(&a, new);
-		i++;		
+		i++;
 	}
 	return (a);
 }

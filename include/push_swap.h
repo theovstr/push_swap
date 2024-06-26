@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 16:18:26 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/25 13:42:26 by theveste         ###   ########.fr       */
+/*   Updated: 2024/06/26 17:06:54 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,7 @@ int					list_is_valid_mulitple_arg(t_cnt *data);
 void				double_in_list(t_cnt *data);
 int					lenght_of_list(char **list);
 int					only_number(char *str);
+t_stack				*ft_stack_new(int content);
+void				sa(t_stack **a);
 
 #endif
