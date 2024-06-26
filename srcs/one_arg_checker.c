@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:55:35 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/26 16:22:21 by theveste         ###   ########.fr       */
+/*   Updated: 2024/06/26 19:09:54 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,12 +88,13 @@ int	list_is_valid(char *str, t_cnt *data)
 		if (ft_atoi(data->list_of_number[data->idx]) == 0
 			|| only_number(data->list_of_number[data->idx]) == 0)
 		{
-			ft_printf("Error\nLa liste ne doit contenir seulement des NOMBRE\nentre int MIN et int MAX");
+			ft_printf("Error\nLa liste ne doit contenir seulement des NOMBRE\n"
+				"entre int MIN et int MAX");
 			ft_free(data->list_of_number, data->list_size);
 			exit(EXIT_FAILURE);
 		}
 		data->idx += 1;
 	}
 	double_in_list(data);
-	return (1); // 0.1 live if no error
+	return (1);
 }

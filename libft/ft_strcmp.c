@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 19:53:39 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/26 16:11:02 by theveste         ###   ########.fr       */
+/*   Updated: 2024/06/26 19:07:48 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -23,9 +23,9 @@ int	ft_strcmp(const char *s1, const char *s2)
 		i++;
 	if (s2[j] == '+')
 		j++;
-	while(s1[i] == '0')
+	while (s1[i] == '0')
 		i++;
-	while(s2[j] == '0')
+	while (s2[j] == '0')
 		j++;
 	while (s1[i] && s2[j] && s1[i] == s2[j])
 	{

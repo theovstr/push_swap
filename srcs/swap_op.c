@@ -6,12 +6,11 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:42:31 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/26 19:01:42 by theveste         ###   ########.fr       */
+/*   Updated: 2024/06/26 19:10:49 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
 
 void	sa(t_stack **a)
 {
@@ -28,13 +27,13 @@ void	sa(t_stack **a)
 
 void	sb(t_stack **b)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (!b || !((*b)->next))
 		return ;
 	tmp = *b;
 	(*b) = (*b)->next;
-	tmp->next = (*b)->next;  
+	tmp->next = (*b)->next;
 	(*b)->next = tmp;
 	ft_printf("sb\n");
 }
