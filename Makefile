@@ -11,7 +11,9 @@ C_FILE	=	push_swap.c \
 			create_list.c	\
 			one_arg_checker.c \
 			multiple_arg_checker.c\
-			swap_op.c
+			swap_op.c\
+			push_op.c\
+			rotate_op.c\
 
 SRC		= $(addprefix $(SRC_DIR), $(C_FILE))
 
