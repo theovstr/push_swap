@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 16:18:26 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/26 19:07:21 by theveste         ###   ########.fr       */
+/*   Updated: 2024/07/01 15:27:09 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ typedef struct s_cnt
 	t_stack			stack_a;
 }					t_cnt;
 
+int					ft_check_sorted(t_stack *a);
 void				args_checking(int argc, char **argv, t_cnt *data);
 t_stack				*list_creation(t_cnt *data);
 t_stack				*ft_lstlaste(t_stack *lst);

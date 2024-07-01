@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:33:37 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/26 19:09:02 by theveste         ###   ########.fr       */
+/*   Updated: 2024/07/01 15:32:58 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ void	ft_free_list(t_stack **lst)
 	}
 }
 
+/**
+ * We have check all the arguments for validation
+ * We checked the duplicate in the list
+ * We created the list with all the number inside, and are ready to use it
+*/
+
 int	main(int argc, char **argv)
 {
 	t_cnt	data;
@@ -47,13 +53,23 @@ int	main(int argc, char **argv)
 		ft_printf("old list : %d\n", tmp->nbr);
 		tmp = tmp->next;
 	}
-	sa(&a);
-	tmp = a;
-	while (tmp != NULL)
-	{
-		ft_printf("new list :%d\n", tmp->nbr);
-		tmp = tmp->next;
-	}
 	ft_free_list(&a);
 	ft_printf("Ending is ok !");
 }
+
+// Mini test i did with the main !
+
+	// sa(&a);
+	// tmp = a;
+	// while (tmp != NULL)
+	// {
+	// 	ft_printf("new list :%d\n", tmp->nbr);
+	// 	tmp = tmp->next;
+	// }
+	// if (ft_check_sorted(a) == -1)
+	// {
+	// 	ft_printf("List is not sorted !\n");
+	// 	ft_free_list(&a);
+	// }
+	// else
+	// 	ft_printf("List is sorted !\n");

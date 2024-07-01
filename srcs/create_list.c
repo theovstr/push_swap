@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 11:54:58 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/26 16:24:51 by theveste         ###   ########.fr       */
+/*   Updated: 2024/07/01 15:19:33 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@
  * Using the size of the array given by split
  * creating
  */
+// t_stack *ft_lstaddfront(t_stack *lst, t_stack **stack)
+// {
+// 	t_stack *lst;
+// 	lst = ft_stack_new(0);
+// }
 
 t_stack	*ft_lstlaste(t_stack *lst)
 {

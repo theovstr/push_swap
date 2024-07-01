@@ -14,6 +14,7 @@ C_FILE	=	push_swap.c \
 			swap_op.c\
 			push_op.c\
 			rotate_op.c\
+			check_sort.c\
 
 SRC		= $(addprefix $(SRC_DIR), $(C_FILE))
 

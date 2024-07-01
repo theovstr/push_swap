@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:55:35 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/26 19:09:54 by theveste         ###   ########.fr       */
+/*   Updated: 2024/07/01 15:09:12 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	double_in_list(t_cnt *data)
 			if (ft_strcmp(data->list_of_number[idx],
 					data->list_of_number[comp]) == 0)
 			{
-				ft_printf("Error\nDoublon dans la liste");
+				ft_printf("Error\n");
 				if (data->multi_args == 0)
 					ft_free(data->list_of_number, data->list_size);
 				exit(EXIT_FAILURE);
@@ -78,7 +78,7 @@ int	list_is_valid(char *str, t_cnt *data)
 		return (0);
 	if (data->list_of_number[data->idx] == NULL)
 	{
-		ft_printf("Error\nNo item in list !");
+		ft_printf("Error\n");
 		free(data->list_of_number);
 		return (0);
 	}
@@ -88,8 +88,7 @@ int	list_is_valid(char *str, t_cnt *data)
 		if (ft_atoi(data->list_of_number[data->idx]) == 0
 			|| only_number(data->list_of_number[data->idx]) == 0)
 		{
-			ft_printf("Error\nLa liste ne doit contenir seulement des NOMBRE\n"
-				"entre int MIN et int MAX");
+			ft_printf("Error\n");
 			ft_free(data->list_of_number, data->list_size);
 			exit(EXIT_FAILURE);
 		}

@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_op.c                                        :+:      :+:    :+:   */
+/*   check_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/26 15:44:22 by theveste          #+#    #+#             */
-/*   Updated: 2024/07/01 15:33:10 by theveste         ###   ########.fr       */
+/*   Created: 2024/07/01 15:20:06 by theveste          #+#    #+#             */
+/*   Updated: 2024/07/01 15:31:27 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
 /**
- * Should put the first element in the last position,
- * So, i need to copy the last element;
- * push the copied element in front of the list, and then remove the last element
-*/
+ * Check if the list is sorted in ascending order 
+ * by comparing each value with the next one in the list, 
+ * if the next value is inferior to the actual one, then the list is not sorted !
+ */
 
-// void	ra(t_stack **a)
-// {
-// 	if (!*a || !((*a)->next))
-// 		return ;
-// }
+int	ft_check_sorted(t_stack *a)
+{
+	t_stack	*tmp;
+
+	if (!a)
+		return (-1);
+	tmp = a;
+	while (tmp->next != NULL)
+	{
+		if (tmp->next->nbr < tmp->nbr)
+			return (-1);
+		tmp = tmp->next;
+	}
+	return (0);
+}

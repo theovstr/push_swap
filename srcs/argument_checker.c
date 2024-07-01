@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 10:40:45 by theveste          #+#    #+#             */
-/*   Updated: 2024/06/26 15:58:07 by theveste         ###   ########.fr       */
+/*   Updated: 2024/07/01 15:06:01 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	args_checking(int argc, char **argv, t_cnt *data)
 {
 	if (argc < 2)
 	{
-		ft_printf("Error\nThis program take at least one argument");
+		ft_printf("Error\n");
 		exit(EXIT_FAILURE);
 	}
 	else if (argc == 2)
