@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 11:54:58 by theveste          #+#    #+#             */
-/*   Updated: 2024/07/01 15:19:33 by theveste         ###   ########.fr       */
+/*   Updated: 2024/07/01 16:59:11 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,6 @@
 // 	lst = ft_stack_new(0);
 // }
 
-t_stack	*ft_lstlaste(t_stack *lst)
-{
-	if (!lst)
-		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
-}
 
 t_stack	*ft_stack_new(int content)
 {

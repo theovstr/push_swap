@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 16:18:26 by theveste          #+#    #+#             */
-/*   Updated: 2024/07/01 15:27:09 by theveste         ###   ########.fr       */
+/*   Updated: 2024/07/01 16:59:50 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,9 @@ void				double_in_list(t_cnt *data);
 int					lenght_of_list(char **list);
 int					only_number(char *str);
 t_stack				*ft_stack_new(int content);
+int					ft_lstsizze(t_stack *lst);
+int					ft_min(t_stack *a);
+int					ft_max(t_stack *a);
 // operation
 void				sa(t_stack **a);
 void				sb(t_stack **b);
