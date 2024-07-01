@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:55:35 by theveste          #+#    #+#             */
-/*   Updated: 2024/07/01 15:09:12 by theveste         ###   ########.fr       */
+/*   Updated: 2024/07/01 18:00:51 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,8 @@ int	list_is_valid(char *str, t_cnt *data)
 	data->list_size = lenght_of_list(data->list_of_number);
 	while (data->list_of_number[data->idx] != NULL)
 	{
-		if (ft_atoi(data->list_of_number[data->idx]) == 0
+		if ((ft_atoi(data->list_of_number[data->idx]) == 0 
+			&& reel_zero(data->list_of_number[data->idx]) == 0)	
 			|| only_number(data->list_of_number[data->idx]) == 0)
 		{
 			ft_printf("Error\n");

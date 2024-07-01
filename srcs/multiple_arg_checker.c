@@ -6,7 +6,7 @@
 /*   By: theveste <theveste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:28:12 by theveste          #+#    #+#             */
-/*   Updated: 2024/07/01 15:06:15 by theveste         ###   ########.fr       */
+/*   Updated: 2024/07/01 18:10:04 by theveste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,22 @@
 // 	ft_printf("%s\n", str);
 // }
 
+int	reel_zero(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (str[i] == '-')
+		i++;
+	while (str[i] != '\0')
+	{
+		if (str[i] != '0')
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 int	list_is_valid_mulitple_arg(t_cnt *data)
 {
 	if (data->list_of_number == NULL)
@@ -45,7 +61,8 @@ int	list_is_valid_mulitple_arg(t_cnt *data)
 	data->list_size = lenght_of_list(data->list_of_number);
 	while (data->list_of_number[data->idx] != NULL)
 	{
-		if (ft_atoi(data->list_of_number[data->idx]) == 0
+		if ((ft_atoi(data->list_of_number[data->idx]) == 0 
+			&& reel_zero(data->list_of_number[data->idx]) == 0)
 			|| only_number(data->list_of_number[data->idx]) == 0)
 		{
 			ft_printf("Error\n");
